@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 const theme = {
   headerHeight: '8rem',
   brandColor: '#c6ae36',
+  brandColor2: '#4d80bf',
   black: '#051441',
   white: '#ffffff',
   captionFont: '1.8rem',

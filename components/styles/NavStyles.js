@@ -1,128 +1,264 @@
 import styled from 'styled-components';
 
 const NavStyles = styled.div`
-    height: ${props => props.theme.headerHeight};
-    line-height: 4.5rem;
+  min-height: ${(props) => props.theme.headerHeight};
+  width: 100%;
+  z-index: 100;
+  background: rgb(198, 212, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(198, 212, 255, 1) 0%,
+    rgba(232, 238, 255, 1) 35%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  display: flex;
+  flex-wrap: wrap;
+  .header-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 100%;
     width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 100;
-    .header-wrap{
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        border-bottom: 0.1rem solid rgba(255, 255, 255, 0.17);
-        &--logo-section{
-            width: 20%;
-            text-align: left;
-            padding-top: 2.2rem;
-            img{
-                width: 9.9rem;
-            }
-        }
-        &--link-section{
-            width: 80%;
-            ul{
-                text-align: right;
-                height: 5rem;
-                line-height: 5rem;
-                li{
-                    display: inline-block;
-                    margin-left: 5rem;
-                    a{
-                        color: #ffffff;
-                        text-decoration: none;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 2rem;
-                        font-size: 1.3rem;
-                        text-transform: uppercase;
-                        display: inline-block;
-                        border-bottom: 0.2rem solid transparent;
-                        letter-spacing: 0.1rem;
-                        &.active{
-                            position: relative;
-                            &::after{
-                                content: "";
-                                position: absolute;
-                                background: #fff;
-                                width: 100%;
-                                bottom: -2.8rem;
-                                height: 0.2rem;
-                                left: 0;
-                            }
-                        }
-                    }
-                    &.bugger-menu{
-                        width: 3rem;
-                        cursor: pointer;
-                        .line{
-                            display: block;
-                            width: 100%;
-                            height: 0.5rem;
-                            margin-bottom: 0.2rem;
-                            background-color: #ffffff;
-                            border-radius: 0.5rem;
-                            &:first-child{
-                                margin-top: 1.5rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .mobile-nav{
-        position: absolute;
-        background: #fff;
-        width: 100%;
-        z-index: 100;
-        left: 0;
-        right: 0;
-        top: 0;
-        i{
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.17);
+    .top-nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 1rem 0;
+      font-size: 1.5rem;
+      .first-links {
+        margin: 0;
+        padding: 0;
+        margin-right: 6rem;
+        li {
+          display: inline;
+          margin-left: 3rem;
+          color: #5183c1;
+          position: relative;
+          &::after {
+            content: '';
             position: absolute;
-            font-size: 3rem;
-            right: 2rem;
-            top: 1rem;
-            color: ${props => props.theme.brandColor};
-            z-index: 100;
-        }
-        ul{
-            height: auto;
-            position: relative;
-            text-align: center;
-            margin: 0;
-            padding: 5rem 0;
-            li{
-                display: block;
-                margin: 0;
-                padding: 0;
-                a{
-                    color: ${props => props.theme.black};
-                    font-size: 1.6rem;
-                    display: block;
-                    line-height: 1rem;
-                    font-weight: 600;
-                    display: inline-block;
-                    &.active{
-                        position: relative;
-                        &::after{
-                            content: "";
-                            position: absolute;
-                            background: #000;
-                            width: 100%;
-                            bottom: -2.8rem;
-                            height: 0.2rem;
-                            left: 0;
-                            top: 1.7rem;
-                        }
-                    }
-                }
+            width: 2px;
+            height: 100%;
+            border-left: 2px solid;
+            top: 0;
+            right: -14px;
+          }
+          &:last-child {
+            &::after {
+              content: none;
             }
+          }
+          a {
+            display: inline;
+            color: #5183c1;
+            cursor: pointer;
+          }
         }
+      }
+      .account {
+        margin: 0;
+        padding: 0;
+        li {
+          display: inline;
+          margin-left: 2rem;
+          color: #5183c1;
+          div {
+            display: inline;
+          }
+          i {
+            display: inline-block;
+            padding-right: 0.5rem;
+          }
+          a {
+            color: #5183c1;
+            cursor: pointer;
+          }
+        }
+      }
     }
+    .logo-section {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      .logo-sec {
+        padding-bottom: 1rem;
+        a {
+          img {
+            width: 35rem;
+          }
+        }
+      }
+      .sarch-wrap {
+        display: flex;
+        align-items: center;
+        .input-wrap {
+          background-color: #fff;
+          height: 5rem;
+          width: 35rem;
+          border-radius: 0.3rem;
+          display: flex;
+          flex-wrap: nowrap;
+          box-shadow: 0 2px 5px 1px rgb(64 60 67 / 5%);
+          i {
+            width: 10%;
+            text-align: center;
+            display: inline-block;
+            line-height: 4.9rem;
+          }
+          input {
+            width: 90%;
+            outline: none;
+            height: 100%;
+            border: none;
+            color: #999;
+            font-size: 1.5rem;
+          }
+        }
+        button {
+          background-color: ${(props) => props.theme.brandColor2};
+          color: #fff;
+          outline: none;
+          border: none;
+          margin-left: 0.4rem;
+          border-radius: 0.3rem;
+          width: 10rem;
+          height: 5rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .data-sec {
+    width: 100%;
+    background-color: ${(props) => props.theme.brandColor};
+    padding: 0.2rem 0;
+    .data {
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin-right: 3rem;
+        cursor: pointer;
+        .title {
+          font-weight: 300;
+          padding-right: 0.5rem;
+        }
+        .cost {
+          padding-right: 0.3rem;
+        }
+        .trend {
+          color: #c9190e;
+          font-size: 0.8rem;
+          i {
+          }
+        }
+      }
+    }
+  }
+  .cart-sec {
+    width: 100%;
+    background-color: ${(props) => props.theme.brandColor2};
+    .flex-wrapper {
+      display: flex;
+      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    .extra-link {
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        color: #fff;
+        margin-right: 3rem;
+        cursor: pointer;
+        line-height: 5rem;
+        a {
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+    .cart-wrap {
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        color: #fff;
+        cursor: pointer;
+        a {
+          color: #fff;
+          cursor: pointer;
+        }
+        .icon {
+          padding-right: 0.5rem;
+          i {
+          }
+        }
+        .text {
+          padding-right: 0.5rem;
+        }
+        .count {
+          background-color: #095cb2;
+          display: inline-block;
+          height: 100%;
+          padding: 1rem 1.5rem;
+        }
+      }
+    }
+  }
+  .mobile-nav {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 0;
+    i {
+      position: absolute;
+      font-size: 3rem;
+      right: 2rem;
+      top: 1rem;
+      color: ${(props) => props.theme.brandColor};
+      z-index: 100;
+    }
+    ul {
+      height: auto;
+      position: relative;
+      text-align: center;
+      margin: 0;
+      padding: 5rem 0;
+      li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        a {
+          color: ${(props) => props.theme.black};
+          font-size: 1.6rem;
+          display: block;
+          line-height: 1rem;
+          font-weight: 600;
+          display: inline-block;
+          &.active {
+            position: relative;
+            &::after {
+              content: '';
+              position: absolute;
+              background: #000;
+              width: 100%;
+              bottom: -2.8rem;
+              height: 0.2rem;
+              left: 0;
+              top: 1.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
-`
-
-export default NavStyles
+export default NavStyles;
