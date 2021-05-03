@@ -1,12 +1,11 @@
 import Banner from '../components/Banner';
+import About from '../components/About';
+import Services from '../components/Services';
 const Home = () => (
   <>
     <Banner />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <About />
+    <Services />
   </>
 );
 

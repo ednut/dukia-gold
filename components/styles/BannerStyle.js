@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const BannerStyle = styled.footer`
+const BannerStyle = styled.div`
   width: 100%;
   height: 60rem;
   background-image: url('https://i.ibb.co/NtVPxb8/sean-pollock-Ph-Yq704ffd-A-unsplash.png');
