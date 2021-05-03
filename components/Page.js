@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Nav from './Nav';
 import Meta from './Meta';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 
 const theme = {
   headerHeight: '8rem',
-  brandColor: '#3188DD',
+  brandColor: '#c6ae36',
   black: '#051441',
   white: '#ffffff',
-  captionFont: "1.8rem",
-  titleFont: "3rem",
-  footerColor: '#001329'
+  captionFont: '1.8rem',
+  titleFont: '3rem',
+  footerColor: '#252d34'
 };
-
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -54,11 +53,11 @@ class Page extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-          <Meta />
-          <GlobalStyle />
-          <Nav />
-          {this.props.children}
-          <Footer/>
+        <Meta />
+        <GlobalStyle />
+        <Nav />
+        {this.props.children}
+        <Footer />
       </ThemeProvider>
     );
   }
