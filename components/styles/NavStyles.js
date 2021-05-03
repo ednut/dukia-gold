@@ -24,12 +24,19 @@ const NavStyles = styled.div`
       width: 100%;
       display: flex;
       justify-content: flex-end;
+      flex-wrap: wrap;
       padding: 1rem 0;
       font-size: 1.5rem;
+      @media (max-width: 991px) {
+        text-align: center;
+      }
       .first-links {
         margin: 0;
         padding: 0;
         margin-right: 6rem;
+        @media (max-width: 991px) {
+          width: 100%;
+        }
         li {
           display: inline;
           margin-left: 3rem;
@@ -59,10 +66,16 @@ const NavStyles = styled.div`
       .account {
         margin: 0;
         padding: 0;
+        @media (max-width: 991px) {
+          width: 100%;
+        }
         li {
           display: inline;
           margin-left: 2rem;
           color: #5183c1;
+          @media (max-width: 991px) {
+            margin-right: 2rem;
+          }
           div {
             display: inline;
           }
@@ -80,19 +93,29 @@ const NavStyles = styled.div`
     .logo-section {
       width: 100%;
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       justify-content: space-between;
       .logo-sec {
         padding-bottom: 1rem;
         a {
           img {
             width: 35rem;
+            @media (max-width: 991px) {
+              width: 35rem;
+            }
           }
+        }
+        @media (max-width: 991px) {
+          width: 100%;
         }
       }
       .sarch-wrap {
         display: flex;
         align-items: center;
+        @media (max-width: 991px) {
+          width: 100%;
+          margin-bottom: 2rem;
+        }
         .input-wrap {
           background-color: #fff;
           height: 5rem;
@@ -101,6 +124,9 @@ const NavStyles = styled.div`
           display: flex;
           flex-wrap: nowrap;
           box-shadow: 0 2px 5px 1px rgb(64 60 67 / 5%);
+          @media (max-width: 991px) {
+            width: 70%;
+          }
           i {
             width: 10%;
             text-align: center;
@@ -126,6 +152,9 @@ const NavStyles = styled.div`
           width: 10rem;
           height: 5rem;
           font-size: 1.5rem;
+          @media (max-width: 991px) {
+            width: 30%;
+          }
         }
       }
     }
@@ -134,6 +163,9 @@ const NavStyles = styled.div`
     width: 100%;
     background-color: ${(props) => props.theme.brandColor};
     padding: 0.2rem 0;
+    @media (max-width: 991px) {
+      text-align: center;
+    }
     .data {
       margin: 0;
       padding: 0;
@@ -165,10 +197,17 @@ const NavStyles = styled.div`
       width: 100%;
       flex-wrap: nowrap;
       justify-content: space-between;
+      @media (max-width: 991px) {
+        flex-wrap: wrap;
+        text-align: center;
+      }
     }
     .extra-link {
       margin: 0;
       padding: 0;
+      @media (max-width: 991px) {
+        width: 100%;
+      }
       li {
         display: inline-block;
         color: #fff;
@@ -184,6 +223,9 @@ const NavStyles = styled.div`
     .cart-wrap {
       margin: 0;
       padding: 0;
+      @media (max-width: 991px) {
+        width: 100%;
+      }
       li {
         display: inline-block;
         color: #fff;
