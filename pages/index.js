@@ -1,6 +1,7 @@
+import Banner from '../components/Banner';
 const Home = () => (
   <>
-    <div>Index</div>
+    <Banner />
     <br />
     <br />
     <br />
