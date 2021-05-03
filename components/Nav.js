@@ -51,7 +51,7 @@ const Nav = () => {
                 <Link href="/">
                   <div className="link-wrap">
                     <span className="icon">
-                      <i class="fa fa-user-plus" aria-hidden="true"></i>
+                      <i className="fa fa-user-plus" aria-hidden="true"></i>
                     </span>
                     <span className="text">Create Account</span>
                   </div>
@@ -61,7 +61,7 @@ const Nav = () => {
                 <Link href="/">
                   <div className="link-wrap">
                     <span className="icon">
-                      <i class="fa fa-user" aria-hidden="true"></i>
+                      <i className="fa fa-user" aria-hidden="true"></i>
                     </span>
                     <span className="text">Login</span>
                   </div>
@@ -73,13 +73,13 @@ const Nav = () => {
             <div className="logo-sec">
               <Link href="/">
                 <a>
-                  <img src="/static/Logo.png" alt="Logo" />
+                  <img src="https://i.ibb.co/BnW9f51/Logo.png" alt="Logo" />
                 </a>
               </Link>
             </div>
             <div className="sarch-wrap">
               <div className="input-wrap">
-                <i class="fa fa-search" aria-hidden="true"></i>
+                <i className="fa fa-search" aria-hidden="true"></i>
                 <input type="text" placeholder="Search Products & Content" />
               </div>
               <button>Search</button>
@@ -94,7 +94,7 @@ const Nav = () => {
               <span className="title">Gold:</span>
               <span className="cost">$1,747.25</span>
               <span className="trend">
-                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <i className="fa fa-caret-down" aria-hidden="true"></i>
                 32.83
               </span>
             </li>
@@ -102,7 +102,7 @@ const Nav = () => {
               <span className="title">Silver:</span>
               <span className="cost">$47.25</span>
               <span className="trend">
-                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <i className="fa fa-caret-down" aria-hidden="true"></i>
                 0.83
               </span>
             </li>
@@ -110,7 +110,7 @@ const Nav = () => {
               <span className="title">Platinum:</span>
               <span className="cost">$1,147.25</span>
               <span className="trend">
-                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <i className="fa fa-caret-down" aria-hidden="true"></i>
                 0.83
               </span>
             </li>
@@ -118,7 +118,7 @@ const Nav = () => {
               <span className="title">Palladium:</span>
               <span className="cost">$2,147.25</span>
               <span className="trend">
-                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <i className="fa fa-caret-down" aria-hidden="true"></i>
                 0.83
               </span>
             </li>
@@ -161,7 +161,7 @@ const Nav = () => {
                   <div>
                     {' '}
                     <span className="icon">
-                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                      <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                     </span>
                     <span className="text">My Cart</span>
                     <span className="count">12</span>

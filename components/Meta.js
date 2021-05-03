@@ -14,7 +14,12 @@ const Meta = () => (
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png"></link>
     <link rel="shortcut icon" href="/static/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"
+      integrity="sha512-bUg5gaqBVaXIJNuebamJ6uex//mjxPk8kljQTdM1SwkNrQD7pjS+PerntUSD+QRWPNJ0tq54/x4zRV8bLrLhZg=="
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
